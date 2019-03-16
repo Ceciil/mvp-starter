@@ -1,4 +1,4 @@
-{
+module.exports = {
   businesses: [
     {
       id: "M0JTO3oyu6gxh1mfFjU-dA",
@@ -784,12 +784,12 @@
       display_phone: "(415) 355-9125",
       distance: 1371.8892923395292
     }
-  ];
-  total: 1100;
+  ],
+  total: 1100,
   region: {
     center: {
-      longitude: -122.43644714355469;
-      latitude: 37.76089938976322;
+      longitude: -122.43644714355469,
+      latitude: 37.76089938976322
     }
   }
-}
+};
