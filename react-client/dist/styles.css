@@ -1,61 +1,24 @@
+/**************************************
+  Main Styles
+**************************************/
+
 body {
-  background-color: #A72223;
+  background-image: linear-gradient(#A72223, #650b0bf6);
+  margin: 0 0 0 0;
 }
+
+#app {
+  margin: 0 0 0 0;
+}
+
+/**************************************
+  Main Container
+**************************************/
 
 .container {
   width: 100%;
   text-align: center;
-  background-color: #A72223;
-}
-
-.input-search {
-  height: 50px;
-  /* border: 3px solid #FFFFFF;
-  border-radius: 25px; */
-}
-
-form {
-  padding-top: 20px;
-  /* padding-bottom: 400px; */
-}
-
-.input-search input {
-  width: 600px;
-  height: 50px;
-  /* background: transparent; */
-  text-align: center;
-  font-size: 18px;
-}
-
-button {
-  border-radius: 28px;
-  border: 1px solid rgb(88, 0, 0);
-  font-size: 17px;
-  padding: 16px 31px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #f44242;
-  color: #FFFFFF;
-}
-
-h1, h3 {
-  color: #FDFFFC;
-}
-
-h1 {
-  padding-top: 140px;
-  padding-bottom: 0px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 88px;
-  text-transform: uppercase;
-}
-
-h3 {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 32px;
-  text-transform: lowercase;
+  /* background-image: linear-gradient(#A72223, #650b0bf6); */
 }
 
 @keyframes fadeIn {
@@ -71,13 +34,115 @@ h3 {
   animation: fadeIn 2.0s ease forwards;
 }
 
+#pad {
+  height: 100px;
+}
+
+/**************************************
+  Heading
+**************************************/
+
+h1, h2, h3 {
+  color: #FDFFFC;
+  text-shadow: 1px 1px 2px rgb(88, 0, 0);
+}
+
+h1 {
+  margin-top: 130px;
+  margin-bottom: 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 88px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 32px;
+  text-transform: lowercase;
+}
+
+/**************************************
+  Buttons
+**************************************/
+
+.buttons-div {
+  margin-bottom: 45px;
+}
+
+button {
+  border-radius: 28px;
+  border: 1px solid rgb(88, 0, 0);
+  font-size: 17px;
+  padding: 16px 31px;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ce2626;
+  color: #FDFFFC;
+}
+
+/**************************************
+  Search
+**************************************/
+
+form {
+  padding-top: 20px;
+  height: 400px;
+}
+
+.input-search {
+  height: 50px;
+}
+
+.input-search input {
+  width: 600px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+/**************************************
+  Display
+**************************************/
+
+.display-div {
+  height: 400px;
+  margin-bottom: 150px;
+  overflow: scroll;
+}
+
 .display {
+  background: rgb(245, 245, 245);
   display: flex;
-  /* background-color: #FDFFFC; */
-  height: 600px;
+  height: 400px;
+  width: 800px;
+  margin: auto;
+  margin-right: auto;
+  border: 0.5px solid black;
+}
+
+.overflow {
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img {
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: 1px solid black;
+  max-width: 450px;
+  margin: 24px 0 24px 0;
+}
+
+/**************************************
+  Choice
+**************************************/
+
+.choice-title {
+  color: #FDFFFC;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-family: 'PT Sans', sans-serif;
 }
