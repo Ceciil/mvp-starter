@@ -1,13 +1,13 @@
 import React from "react";
 
-function Buttons() {
+function Buttons(props) {
   return (
-    <div>
-      <button>American</button>
-      <button>Chinese</button>
-      <button>Indian</button>
-      <button>Japanese</button>
-      <button>Vietnamese</button>
+    <div className="buttons-div">
+      <button onClick={props.onClick}>Chinese</button>
+      <button onClick={props.onClick}>Indian</button>
+      <button onClick={props.onClick}>Japanese</button>
+      <button onClick={props.onClick}>Korean</button>
+      <button onClick={props.onClick}>Vietnamese</button>
     </div>
   );
 }
