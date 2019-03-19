@@ -1,6 +1,6 @@
-const axios = require("axios");
-const token = require("../token.js");
-const { selectOne } = require("../database-mongo/index.js");
+const axios = require('axios');
+const token = require('../token.js');
+const { selectOne, saveOne } = require('../database-mongo/index.js');
 
 module.exports = {
   getRestaurants(req, res) {
@@ -8,7 +8,7 @@ module.exports = {
     const url = `https://api.yelp.com/v3/businesses/search?location=San Francisco&term=${search}`;
     axios
       .get(url, {
-        headers: { Authorization: "Bearer " + token.TOKEN }
+        headers: { Authorization: 'Bearer ' + token.TOKEN }
       })
       .then(response => {
         res.send(response.data);
@@ -24,6 +24,14 @@ module.exports = {
         return error;
       }
       res.send(data);
+    });
+  },
+  saveOneRestaurant(req, res) {
+    saveOne(req.body, error => {
+      if (error) {
+        return error;
+      }
+      res.send();
     });
   }
 };
