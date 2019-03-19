@@ -1,4 +1,4 @@
-# Project Name #
+# Dinner Decider #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -17,28 +17,37 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  <!-- > Name the product in a way the reader (i.e. your target customers) will understand. -->
+  > Never worry about dinner decisions again.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  <!-- > Describe who the market for the product is and what benefit they get. One sentence only underneath the title. -->
+  > For the groups who can never decide where to go for dinner.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  <!-- > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
+  > Can't decide what's for dinner? With the ease of a click, we'll pick a restaurant for you! Add your favorite restaurants and we'll handle all the choices.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  <!-- > Describe the problem your product solves. -->
+  > My family can never decide on where to go for dinner. Even with choices, a decision is never made and fifteen minutes have passed. With Dinner Decider, a location is picked for you.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  <!-- > Describe how your product elegantly solves the problem. -->
+  > With the click of a button, Dinner Decider will provide a restaurant for you to go to. Pick from your favorite cuisines or even go for a random one!
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  <!-- > A quote from a spokesperson in your company. -->
+  > Y'all can't say "I don't know (where I want to go)." anymore.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  <!-- > Describe how easy it is to get started. -->
+  > www.thisismywebsite.com
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  <!-- > Provide a quote from a hypothetical customer that describes how they experienced the benefit. -->
+  > "I can't wait to try my own product!" -Angela Lee
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  <!-- > Wrap it up and give pointers where the reader should go next. -->
+  > Try it out! To leave feedback, go to 1-800-feed-back.
