@@ -1,31 +1,65 @@
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/restaurants");
 
 var db = mongoose.connection;
 
-db.on('error', function() {
-  console.log('mongoose connection error');
+db.on("error", function () {
+  console.log("mongoose connection error");
 });
 
-db.once('open', function() {
-  console.log('mongoose connected successfully');
+db.once("open", function () {
+  console.log("mongoose connected successfully");
 });
 
 var itemSchema = mongoose.Schema({
-  quantity: Number,
-  description: String
+  id: String,
+  alias: String,
+  name: String,
+  image_url: String,
+  is_closed: Boolean,
+  url: String,
+  review_count: Number,
+  categories: [
+    { alias: String, title: String },
+    { alias: String, title: String },
+    { alias: String, title: String }
+  ],
+  rating: Number,
+  coordinates: { latitude: Number, longitude: Number },
+  transactions: Array,
+  price: String,
+  location: {
+    address1: String,
+    address2: String,
+    address3: String,
+    city: String,
+    zip_code: String,
+    country: String,
+    state: String,
+    display_address: [String, String]
+  },
+  phone: String,
+  display_phone: String,
+  distance: Number
 });
 
-var Item = mongoose.model('Item', itemSchema);
+var Item = mongoose.model("Restaurant", itemSchema);
 
-var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
-    if(err) {
+var selectOne = function (query, callback) {
+  let lowercaseQuery = query.toLowerCase();
+  if (lowercaseQuery === "indian") {
+    lowercaseQuery = "indpak";
+  }
+  Item.find({ "categories.0.alias": `${lowercaseQuery}` }, (err, data) => {
+    if (err) {
       callback(err, null);
     } else {
-      callback(null, items);
+      console.log(data);
+      callback(null, data);
     }
   });
 };
 
-module.exports.selectAll = selectAll;
+module.exports = {
+  selectOne
+};
