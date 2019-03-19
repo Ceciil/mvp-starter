@@ -1,17 +1,17 @@
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/restaurants");
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/restaurants');
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 
-db.on("error", function () {
-  console.log("mongoose connection error");
+db.on('error', () => {
+  console.log('mongoose connection error');
 });
 
-db.once("open", function () {
-  console.log("mongoose connected successfully");
+db.once('open', () => {
+  console.log('mongoose connected successfully');
 });
 
-var itemSchema = mongoose.Schema({
+const itemSchema = mongoose.Schema({
   id: String,
   alias: String,
   name: String,
@@ -43,23 +43,33 @@ var itemSchema = mongoose.Schema({
   distance: Number
 });
 
-var Item = mongoose.model("Restaurant", itemSchema);
+const Item = mongoose.model('Restaurant', itemSchema);
 
-var selectOne = function (query, callback) {
+const selectOne = (query, callback) => {
   let lowercaseQuery = query.toLowerCase();
-  if (lowercaseQuery === "indian") {
-    lowercaseQuery = "indpak";
+  if (lowercaseQuery === 'indian') {
+    lowercaseQuery = 'indpak';
   }
-  Item.find({ "categories.0.alias": `${lowercaseQuery}` }, (err, data) => {
+  Item.find({ 'categories.0.alias': `${lowercaseQuery}` }, (err, data) => {
     if (err) {
       callback(err, null);
     } else {
-      console.log(data);
       callback(null, data);
     }
   });
 };
 
+const saveOne = data => {
+  let restaurant = new Item(data);
+  restaurant.save(error => {
+    if (error) {
+      return error;
+    }
+    console.log('Saved!');
+  });
+};
+
 module.exports = {
-  selectOne
+  selectOne,
+  saveOne
 };
