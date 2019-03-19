@@ -47,9 +47,15 @@ const Item = mongoose.model('Restaurant', itemSchema);
 
 const selectOne = (query, callback) => {
   let lowercaseQuery = query.toLowerCase();
+  
   if (lowercaseQuery === 'indian') {
     lowercaseQuery = 'indpak';
   }
+
+  if (lowercaseQuery === 'american') {
+    lowercaseQuery = 'tradamerican';
+  }
+
   Item.find({ 'categories.0.alias': `${lowercaseQuery}` }, (err, data) => {
     if (err) {
       callback(err, null);
