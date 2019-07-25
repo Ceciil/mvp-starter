@@ -1,5 +1,7 @@
 # Dinner Decider
 
+This project was made to help indecisive people save and generate a restaurant to go to based on categories.
+
 ## Getting Started
 
 This repository requires mongodb and webpack.
